@@ -51,12 +51,7 @@ public class KillTarget : MonoBehaviour
             // reset 
             countDown = timeToSelect; hitEffect.Stop();
         }
-<<<<<<< Updated upstream:VRAssignment/Assets/KillTarget.cs
-=======
 
-        //score += 1;
-       
->>>>>>> Stashed changes:VRAssignment/Assets/Scripts/KillTarget.cs
     }
     void SetRandomPosition()
     {
