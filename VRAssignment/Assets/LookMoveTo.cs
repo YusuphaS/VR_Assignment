@@ -1,22 +1,15 @@
+
 using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
-using TMPro;
 
 public class LookMoveTo : MonoBehaviour
 {
     public GameObject ground;
     private Transform camera;
-    public Transform infobubble;
-    private TMP_Text infotext;
 
     void Start()
     {
         camera = Camera.main.transform;
-        if (infobubble != null)
-        {
-            infotext = GetComponentInChildren<TMP_Text>();
-        }
     }
 
 
@@ -37,14 +30,7 @@ public class LookMoveTo : MonoBehaviour
             RaycastHit hit = hits[i];
             hitObject = hit.collider.gameObject; if (hitObject == ground)
             {
-                if (infobubble != null)
-                {
-                    infotext.text = "X:" + hit.point.x.ToString("F2") + "," + "Z:" + hit.point.z.ToString("F2");
-                    infobubble.LookAt(camera.position);
-                    infobubble.Rotate(0, 180f, 0);
-                }
-                transform.position = hit.point;
-               
+                Debug.Log("Hit (x,y,z): " + hit.point.ToString("F2")); transform.position = hit.point;
             }
         }
 
