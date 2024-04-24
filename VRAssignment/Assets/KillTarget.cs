@@ -41,7 +41,8 @@ public class KillTarget : MonoBehaviour
             {
                 // killed 
                 Instantiate(killEffect, target.transform.position, target.transform.rotation);
-                score += 1;
+                score += 1; 
+                scoreText.text = "Score: " + score;
                 countDown = timeToSelect; SetRandomPosition();
             }
         }
@@ -50,6 +51,12 @@ public class KillTarget : MonoBehaviour
             // reset 
             countDown = timeToSelect; hitEffect.Stop();
         }
+<<<<<<< Updated upstream:VRAssignment/Assets/KillTarget.cs
+=======
+
+        //score += 1;
+       
+>>>>>>> Stashed changes:VRAssignment/Assets/Scripts/KillTarget.cs
     }
     void SetRandomPosition()
     {
